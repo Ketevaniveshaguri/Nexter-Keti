@@ -1,15 +1,9 @@
-@import "base";
+@import "features";
+@import "footer";
+@import "gallery";
+@import "header";
+@import "homes";
+@import "realtors";
+@import "sidebar";
 @import "typography";
 
-@import "sidebar";
-@import "header";
-@import "realtors";
-@import "features";
-@import "story";
-@import "homes";
-@import "gallery";
-@import "footer";
-
-body{
-  background-color: black;
-}
