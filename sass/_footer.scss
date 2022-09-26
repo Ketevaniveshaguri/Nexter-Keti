@@ -1,19 +1,57 @@
-$color-primary: #c69963;
-$color-primary-dark: #b28451;
+// $color-primary: #c69963;
+// $color-primary-dark: #b28451;
 
-$color-secondary: #101d2c;
+// $color-secondary: #101d2c;
 
-$color-grey-light-1: #f9f7f6;
-$color-grey-light-2: #aaa;
+// $color-grey-light-1: #f9f7f6;
+// $color-grey-light-2: #aaa;
 
-$color-grey-dark-1: #54483a;
-$color-grey-dark-2: #6d5d4b;
+// $color-grey-dark-1: #54483a;
+// $color-grey-dark-2: #6d5d4b;
 
 // FONT VARIABLES
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
 .footer {
-  background-color: black;
+  background-color: $color-secondary;
   grid-column: full-start/full-end;
+
+  padding: 8rem;
+}
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block;
+    transition: LL 0.2s;
+  }
+
+  &__link:hover,
+  &__active {
+    background-color: rgba(#fff, 0.05);
+    transform: translateY(-3px);
+  }
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: $color-grey-light-2;
+  margin-top: 6rem;
+  text-align: center;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
