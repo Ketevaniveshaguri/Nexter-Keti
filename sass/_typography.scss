@@ -34,7 +34,8 @@ $font-display: "Josefin Sans", sans-serif;
 .heading-3 {
   @extend %heading;
   font-size: 1.6rem;
-  color: $color-primary;
+  // color: black;
+  // color: $color-primary;
 }
 .heading-4 {
   @extend %heading;

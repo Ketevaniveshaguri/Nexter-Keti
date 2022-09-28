@@ -1,17 +1,8 @@
-// $color-primary: #c69963;
-// $color-primary-dark: #b28451;
-
-// $color-secondary: #101d2c;
-
-// $color-grey-light-1: #f9f7f6;
-// $color-grey-light-2: #aaa;
-
-// $color-grey-dark-1: #54483a;
-// $color-grey-dark-2: #6d5d4b;
-
-// FONT VARIABLES
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
+
+$bp-largest: 75em; //1200 px
+$bp-large: 62.5em; //1000px
 
 .sidebar {
   background-color: $color-primary;
@@ -20,6 +11,13 @@ $font-display: "Josefin Sans", sans-serif;
 
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .nav-btn {
@@ -45,5 +43,17 @@ $font-display: "Josefin Sans", sans-serif;
   }
   &::after {
     transform: translateY(1.3rem);
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 0;
+    margin-right: 3rem;
+
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
   }
 }
